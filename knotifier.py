@@ -32,6 +32,19 @@ def check_python_version():
     else:
         raise Exception('Invalid python version requested: %d' % current_python)
 
+def perror(str):
+    print("Error: ", str)
+    sys.exit(1)
+
+
+def pwarn(str):
+    print("Warn: ", str)
+
+
+def pdebug(params):
+    global DEBUG
+    if DEBUG:
+        print("DEBUG:", params)
 
 def handle_config(args):
     pass
